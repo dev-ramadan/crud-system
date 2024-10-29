@@ -1,0 +1,93 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.mode{
+        background-color:#000000;
+        color: white;
+        .fa-moon{
+            display: none;
+        }
+        .fa-sun{
+            visibility: visible;
+        }
+
+}
+.fa-sun{
+    visibility: hidden;
+}
+input {
+    outline: none;
+    transition: all .4s;
+}
+
+input:hover {
+    transform: scale(1.1);
+}
+
+.total {
+    width: fit-content !important;
+}
+
+.total::before {
+    content: 'Total : ';
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+.change {
+    background-color: #4D869C !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+table th {
+    text-transform: uppercase;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 8px;
+}
+@media (max-width: 600px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+}
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+@media (max-width: 600px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+}
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}

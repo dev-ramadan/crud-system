@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>CRUD SESTEM</title>
+</head>
+
+<body>
+
+    <section class="container mt-3">
+        <div class="Curd">
+            <div class="head text-center">
+
+                <h1>CRUD <span  onclick="dark_mode()"><i class="fa-regular fa-moon"></i> <i class="fa-regular fa-sun"></i></span></h1>
+                <p>product management system</p>
+            </div>
+
+
+
+
+
+            <div class="inputs">
+                <input type="text" placeholder="title" class="rounded-3 p-2 w-100 bg-dark text-white border border-0 "
+                    id="title">
+
+                <div class="price d-flex  row">
+
+                    <div class="col-md-3">
+                        <input type="number" onkeyup="getTotal()" placeholder="Price"
+                            class="rounded-3 p-2 w-100 bg-dark text-white border border-0 mt-2  " id="Price">
+                        <button class="alert alert-danger p-2 d-none w-100 " id="alert"> Price is
+                            Required !</button>
+
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" onkeyup="getTotal()" placeholder="taxes"
+                            class="rounded-3 p-2 w-100 bg-dark text-white border border-0 mt-2 " id="taxes">
+                    </div>
+
+                    <div class="col-md-3">
+                        <input type="number" onkeyup="getTotal()" placeholder="ads"
+                            class="rounded-3 p-2 w-100 bg-dark text-white border border-0 mt-2  " id="ads">
+                    </div>
+
+                    <div class="col-md-3">
+                        <input type="number" onkeyup="getTotal()" placeholder="discount"
+                            class="rounded-3 p-2 w-100 bg-dark text-white border border-0 mt-2 " id="discount">
+                    </div>
+                    <button class="btn btn-danger  total rounded-4 mx-auto mt-3" id="Submit"></button>
+                </div>
+
+
+
+            </div>
+
+            <div class="body-crud mt-3">
+                <input type="number" placeholder="Count"
+                    class="rounded-3 p-2 w-100 bg-dark text-white border border-0 mb-2" id="Count">
+                <input type="text" placeholder="Category"
+                    class="rounded-3 p-2 w-100 bg-dark text-white border border-0 " id="Category">
+
+                <button class="btn btn-secondary rounded-4 change w-100 mt-3" id="Creat">Create</button>
+
+                <input onkeyup="searchData(this.value) " type="text" placeholder="Search"
+                    class="rounded-3 p-2 w-100 bg-dark text-white border border-0 mb-2 mt-3" id="Search">
+
+                <div class="btn-search d-flex justify-content-around ">
+                    <button onclick="getSearchMood(this.id)" class="btn change btn-secondary rounded-4  mt-3 w-50 me-3"
+                        id="SearchTitle">Search by
+                        title</button>
+                    <button onclick="getSearchMood(this.id)" class="btn change btn-secondary rounded-4 w-50 mt-3"
+                        id="SearchCategory">Search by
+                        Category</button>
+                </div>
+
+
+
+
+            </div>
+
+            <div id="deleteAll">
+
+            </div>
+
+            <div class="w-100 table-responsive">
+                <table class="text-center mt-5 w-100">
+                    <tr class="tabelRow">
+            <div class="w-100 table-responsive">
+                <table class=" mt-5 ">
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>Category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                    <tbody id="tbody">
+
+                    </tbody>
+
+
+                </table>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <script src="css/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/main.js"></script>
+
+
+
+</body>
+
+</html>
